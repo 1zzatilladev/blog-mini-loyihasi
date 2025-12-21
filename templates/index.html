@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bloglar</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; }
+        .post { background: white; padding: 15px; margin: 15px; border-radius: 8px; }
+        h2 { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>Barcha blog postlar</h1>
+
+    {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.sarlavha }}</h2>
+            <p>{{ post.matn }}</p>
+            <small>
+                Muallif: {{ post.muallif }} |
+                Sana: {{ post.yaratilgan_sana }}
+            </small>
+        </div>
+    {% endfor %}
+</body>
+</html>
