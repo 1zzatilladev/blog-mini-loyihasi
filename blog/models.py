@@ -10,4 +10,4 @@ class Blogs(models.Model):
     yaratilgan_sana=models.DateField(auto_now_add=True)
 
 def __str__(self):
-        return f'{self.sarlovha}|{self.matn}' 
+        return self.sarlovha
